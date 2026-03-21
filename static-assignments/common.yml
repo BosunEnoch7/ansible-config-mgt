@@ -17,26 +17,16 @@
         update_cache: yes
       when: ansible_os_family == "Debian"
 
-
 - name: update LB and DB server
   hosts: lb, db
   become: yes
 
   tasks:
-    - name: Update apt repo (Debian/Ubuntu)
-      apt:
-        update_cache: yes
-      when: ansible_os_family == "Debian"
-
-    - name: Update yum repo (RedHat/Amazon Linux)
-      yum:
-        update_cache: yes
-      when: ansible_os_family == "RedHat"
-
     - name: Install wireshark on Debian/Ubuntu
       apt:
         name: wireshark
         state: latest
+        update_cache: yes
       when: ansible_os_family == "Debian"
 
     - name: Install wireshark on RedHat/Amazon Linux
