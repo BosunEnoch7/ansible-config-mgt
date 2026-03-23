@@ -1,0 +1,13 @@
+---
+env: uat
+
+mysql_root_password: RootPass@123
+
+mysql_databases:
+  - name: tooling
+
+mysql_users:
+  - name: toolinguser
+    host: "%"
+    password: ToolingPass@123
+    priv: "*.*:ALL"
