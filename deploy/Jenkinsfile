@@ -39,7 +39,7 @@ pipeline {
                     credentialsId: 'ansible-ssh-key',
                     disableHostKeyChecking: true,
                     installation: 'ansible',
-                    inventory: "inventory/${params.inventory}",
+                    inventory: "inventory/${params.inventory}.yml",
                     playbook: 'playbooks/site.yml'
                 )
             }
