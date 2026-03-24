@@ -1,0 +1,11 @@
+[jenkins]
+172.31.19.179
+
+[nginx]
+172.31.18.74
+
+[sonarqube]
+172.31.16.205
+
+[artifact_repository]
+172.31.24.76
